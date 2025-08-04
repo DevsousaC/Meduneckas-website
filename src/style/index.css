@@ -368,8 +368,6 @@ html {
   }
 }
 
-
-
 /* Conversion Section */
 .conversion {
     padding: 100px 0;
@@ -608,12 +606,14 @@ html {
   .pillars {
     grid-template-columns: 1fr;
   }
-  .timeline {
+  .methods .timeline {
     grid-template-columns: 1fr;
   }
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .about {
+    .about-content {
+      grid-template-columns: 1fr;
+     gap: 40px;
+    }
   }
   .conversion-grid {
     grid-template-columns: 1fr;
@@ -634,11 +634,26 @@ html {
   .hero p {
     font-size: 1rem;
   }
+
 }
 
 @media screen and (max-width: 650px) {
   .header .cta-button{
     display: none;
+  }
+
+  .conversion{
+    padding: 30px;
+
+    .conversion-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .conversion-card {
+      padding: 40px 20px;
+    }
   }
 }
 /* Enhanced Mobile Responsiveness */
@@ -658,6 +673,17 @@ html {
 
   .authority .section-title {
     font-size: 1.8rem;
+  }
+
+  .authority .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .conversion{
+    padding: 5px;
   }
 
   .modal .modal-content {
